@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A32EAAED1A0A11B9008DEECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32EAAEC1A0A11B9008DEECE /* AppDelegate.swift */; };
+		A32EAAEF1A0A11B9008DEECE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32EAAEE1A0A11B9008DEECE /* ViewController.swift */; };
+		A32EAAF21A0A11B9008DEECE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAF01A0A11B9008DEECE /* Main.storyboard */; };
+		A32EAAF41A0A11B9008DEECE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAF31A0A11B9008DEECE /* Images.xcassets */; };
+		A32EAAF71A0A11B9008DEECE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAF51A0A11B9008DEECE /* LaunchScreen.xib */; };
+		A32EAB031A0A11BA008DEECE /* RBLRapiroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32EAB021A0A11BA008DEECE /* RBLRapiroTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A32EAAFD1A0A11B9008DEECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A32EAADF1A0A11B9008DEECE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A32EAAE61A0A11B9008DEECE;
+			remoteInfo = RBLRapiro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A32EAAE71A0A11B9008DEECE /* RBLRapiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RBLRapiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A32EAAEB1A0A11B9008DEECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A32EAAEC1A0A11B9008DEECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A32EAAEE1A0A11B9008DEECE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A32EAAF11A0A11B9008DEECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A32EAAF31A0A11B9008DEECE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A32EAAF61A0A11B9008DEECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A32EAAFC1A0A11B9008DEECE /* RBLRapiroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RBLRapiroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A32EAB011A0A11BA008DEECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A32EAB021A0A11BA008DEECE /* RBLRapiroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBLRapiroTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A32EAAE41A0A11B9008DEECE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A32EAAF91A0A11B9008DEECE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A32EAADE1A0A11B9008DEECE = {
+			isa = PBXGroup;
+			children = (
+				A32EAAE91A0A11B9008DEECE /* RBLRapiro */,
+				A32EAAFF1A0A11BA008DEECE /* RBLRapiroTests */,
+				A32EAAE81A0A11B9008DEECE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A32EAAE81A0A11B9008DEECE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A32EAAE71A0A11B9008DEECE /* RBLRapiro.app */,
+				A32EAAFC1A0A11B9008DEECE /* RBLRapiroTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A32EAAE91A0A11B9008DEECE /* RBLRapiro */ = {
+			isa = PBXGroup;
+			children = (
+				A32EAAEC1A0A11B9008DEECE /* AppDelegate.swift */,
+				A32EAAEE1A0A11B9008DEECE /* ViewController.swift */,
+				A32EAAF01A0A11B9008DEECE /* Main.storyboard */,
+				A32EAAF31A0A11B9008DEECE /* Images.xcassets */,
+				A32EAAF51A0A11B9008DEECE /* LaunchScreen.xib */,
+				A32EAAEA1A0A11B9008DEECE /* Supporting Files */,
+			);
+			path = RBLRapiro;
+			sourceTree = "<group>";
+		};
+		A32EAAEA1A0A11B9008DEECE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A32EAAEB1A0A11B9008DEECE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A32EAAFF1A0A11BA008DEECE /* RBLRapiroTests */ = {
+			isa = PBXGroup;
+			children = (
+				A32EAB021A0A11BA008DEECE /* RBLRapiroTests.swift */,
+				A32EAB001A0A11BA008DEECE /* Supporting Files */,
+			);
+			path = RBLRapiroTests;
+			sourceTree = "<group>";
+		};
+		A32EAB001A0A11BA008DEECE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A32EAB011A0A11BA008DEECE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A32EAAE61A0A11B9008DEECE /* RBLRapiro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A32EAB061A0A11BA008DEECE /* Build configuration list for PBXNativeTarget "RBLRapiro" */;
+			buildPhases = (
+				A32EAAE31A0A11B9008DEECE /* Sources */,
+				A32EAAE41A0A11B9008DEECE /* Frameworks */,
+				A32EAAE51A0A11B9008DEECE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RBLRapiro;
+			productName = RBLRapiro;
+			productReference = A32EAAE71A0A11B9008DEECE /* RBLRapiro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A32EAAFB1A0A11B9008DEECE /* RBLRapiroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A32EAB091A0A11BA008DEECE /* Build configuration list for PBXNativeTarget "RBLRapiroTests" */;
+			buildPhases = (
+				A32EAAF81A0A11B9008DEECE /* Sources */,
+				A32EAAF91A0A11B9008DEECE /* Frameworks */,
+				A32EAAFA1A0A11B9008DEECE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A32EAAFE1A0A11B9008DEECE /* PBXTargetDependency */,
+			);
+			name = RBLRapiroTests;
+			productName = RBLRapiroTests;
+			productReference = A32EAAFC1A0A11B9008DEECE /* RBLRapiroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A32EAADF1A0A11B9008DEECE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = khl;
+				TargetAttributes = {
+					A32EAAE61A0A11B9008DEECE = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					A32EAAFB1A0A11B9008DEECE = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = A32EAAE61A0A11B9008DEECE;
+					};
+				};
+			};
+			buildConfigurationList = A32EAAE21A0A11B9008DEECE /* Build configuration list for PBXProject "RBLRapiro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A32EAADE1A0A11B9008DEECE;
+			productRefGroup = A32EAAE81A0A11B9008DEECE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A32EAAE61A0A11B9008DEECE /* RBLRapiro */,
+				A32EAAFB1A0A11B9008DEECE /* RBLRapiroTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A32EAAE51A0A11B9008DEECE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32EAAF21A0A11B9008DEECE /* Main.storyboard in Resources */,
+				A32EAAF71A0A11B9008DEECE /* LaunchScreen.xib in Resources */,
+				A32EAAF41A0A11B9008DEECE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A32EAAFA1A0A11B9008DEECE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A32EAAE31A0A11B9008DEECE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32EAAEF1A0A11B9008DEECE /* ViewController.swift in Sources */,
+				A32EAAED1A0A11B9008DEECE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A32EAAF81A0A11B9008DEECE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32EAB031A0A11BA008DEECE /* RBLRapiroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A32EAAFE1A0A11B9008DEECE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A32EAAE61A0A11B9008DEECE /* RBLRapiro */;
+			targetProxy = A32EAAFD1A0A11B9008DEECE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A32EAAF01A0A11B9008DEECE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A32EAAF11A0A11B9008DEECE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A32EAAF51A0A11B9008DEECE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A32EAAF61A0A11B9008DEECE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A32EAB041A0A11BA008DEECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A32EAB051A0A11BA008DEECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A32EAB071A0A11BA008DEECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RBLRapiro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A32EAB081A0A11BA008DEECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RBLRapiro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A32EAB0A1A0A11BA008DEECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RBLRapiroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RBLRapiro.app/RBLRapiro";
+			};
+			name = Debug;
+		};
+		A32EAB0B1A0A11BA008DEECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RBLRapiroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RBLRapiro.app/RBLRapiro";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A32EAAE21A0A11B9008DEECE /* Build configuration list for PBXProject "RBLRapiro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A32EAB041A0A11BA008DEECE /* Debug */,
+				A32EAB051A0A11BA008DEECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A32EAB061A0A11BA008DEECE /* Build configuration list for PBXNativeTarget "RBLRapiro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A32EAB071A0A11BA008DEECE /* Debug */,
+				A32EAB081A0A11BA008DEECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A32EAB091A0A11BA008DEECE /* Build configuration list for PBXNativeTarget "RBLRapiroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A32EAB0A1A0A11BA008DEECE /* Debug */,
+				A32EAB0B1A0A11BA008DEECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A32EAADF1A0A11B9008DEECE /* Project object */;
+}
