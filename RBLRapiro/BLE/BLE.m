@@ -1,4 +1,4 @@
-
+ 
 /*
  
  Copyright (c) 2013-2014 RedBearLab
@@ -550,7 +550,6 @@ static int rssi = 0;
             {
                 memcpy(&buf[len], data, data_len);
                 len += data_len;
-                
                 [[self delegate] bleDidReceiveData:buf length:len];
                 len = 0;
             }
