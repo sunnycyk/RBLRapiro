@@ -14,6 +14,8 @@
 		A32EAAF71A0A11B9008DEECE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAF51A0A11B9008DEECE /* LaunchScreen.xib */; };
 		A32EAB031A0A11BA008DEECE /* RBLRapiroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32EAB021A0A11BA008DEECE /* RBLRapiroTests.swift */; };
 		A3B9789A1A0A2CC700A7F99B /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B978981A0A2CC700A7F99B /* BLE.m */; };
+		A3B978A11A0A57C100A7F99B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3B978A31A0A57C100A7F99B /* Localizable.strings */; };
+		A3B978BF1A0B206000A7F99B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B978BE1A0B206000A7F99B /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +30,8 @@
 
 /* Begin PBXFileReference section */
 		A32EAAE71A0A11B9008DEECE /* RBLRapiro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RBLRapiro.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A32EAAEB1A0A11B9008DEECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A32EAAEC1A0A11B9008DEECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A32EAAEE1A0A11B9008DEECE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A32EAAF11A0A11B9008DEECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A32EAAF31A0A11B9008DEECE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A32EAAF61A0A11B9008DEECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A32EAAFC1A0A11B9008DEECE /* RBLRapiroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RBLRapiroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +41,14 @@
 		A3B978971A0A2CC700A7F99B /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
 		A3B978981A0A2CC700A7F99B /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
 		A3B978991A0A2CC700A7F99B /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
+		A3B978A41A0A57C300A7F99B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A3B978A61A0A5C8000A7F99B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		A3B978AC1A0A61A200A7F99B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A3B978B11A0A61B900A7F99B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A3B978B21A0A63F600A7F99B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A3B978BE1A0B206000A7F99B /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
+		A3B978C61A0B2F5000A7F99B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		A3B978C71A0B2F5900A7F99B /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +92,14 @@
 			children = (
 				A3B978961A0A2CC700A7F99B /* BLE */,
 				A32EAAEC1A0A11B9008DEECE /* AppDelegate.swift */,
+				A3B978BE1A0B206000A7F99B /* TableViewController.swift */,
 				A32EAAEE1A0A11B9008DEECE /* ViewController.swift */,
 				A32EAAF01A0A11B9008DEECE /* Main.storyboard */,
 				A32EAAF31A0A11B9008DEECE /* Images.xcassets */,
 				A32EAAF51A0A11B9008DEECE /* LaunchScreen.xib */,
 				A32EAAEA1A0A11B9008DEECE /* Supporting Files */,
 				A32EAB131A0A1D91008DEECE /* BLE-Bridging-Header.h */,
+				A3B978A31A0A57C100A7F99B /* Localizable.strings */,
 			);
 			path = RBLRapiro;
 			sourceTree = "<group>";
@@ -97,7 +107,7 @@
 		A32EAAEA1A0A11B9008DEECE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A32EAAEB1A0A11B9008DEECE /* Info.plist */,
+				A3B978A71A0A5C8000A7F99B /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -192,6 +202,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
+				ja,
 			);
 			mainGroup = A32EAADE1A0A11B9008DEECE;
 			productRefGroup = A32EAAE81A0A11B9008DEECE /* Products */;
@@ -210,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A32EAAF21A0A11B9008DEECE /* Main.storyboard in Resources */,
+				A3B978A11A0A57C100A7F99B /* Localizable.strings in Resources */,
 				A32EAAF71A0A11B9008DEECE /* LaunchScreen.xib in Resources */,
 				A32EAAF41A0A11B9008DEECE /* Images.xcassets in Resources */,
 			);
@@ -232,6 +245,7 @@
 				A3B9789A1A0A2CC700A7F99B /* BLE.m in Sources */,
 				A32EAAEF1A0A11B9008DEECE /* ViewController.swift in Sources */,
 				A32EAAED1A0A11B9008DEECE /* AppDelegate.swift in Sources */,
+				A3B978BF1A0B206000A7F99B /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +271,9 @@
 		A32EAAF01A0A11B9008DEECE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A32EAAF11A0A11B9008DEECE /* Base */,
+				A3B978B11A0A61B900A7F99B /* en */,
+				A3B978C61A0B2F5000A7F99B /* zh-Hant */,
+				A3B978C71A0B2F5900A7F99B /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -268,6 +284,24 @@
 				A32EAAF61A0A11B9008DEECE /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		A3B978A31A0A57C100A7F99B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3B978A41A0A57C300A7F99B /* zh-Hant */,
+				A3B978AC1A0A61A200A7F99B /* en */,
+				A3B978B21A0A63F600A7F99B /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A3B978A71A0A5C8000A7F99B /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3B978A61A0A5C8000A7F99B /* Base */,
+			);
+			name = Info.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -358,7 +392,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = RBLRapiro/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RBLRapiroTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -368,7 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = RBLRapiro/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RBLRapiroTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

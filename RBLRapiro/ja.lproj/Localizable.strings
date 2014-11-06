@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  RBLRapiro
+
+  Created by Sunny Cheung on 5/11/14.
+  Copyright (c) 2014 khl. All rights reserved.
+*/
+
+Initial_Position = "気をつけ";
+Move_Forward ="前に進む";
+Move_Backward = "後ろに進む";
+Turn_Left = "左に曲がる";
+Turn_Right =  "右に曲がる";
+Give_Me_a_Hug =  "だっこして";
+Wave_Right_Hand = "右手を振る";
+Move_Both_Arms = "両手を振る";
+Wave_Left_Hand="左手を振る";
+Catch_Action = "はい、どうぞ";
+CONNECT = "接続する";
+DISCONNECT = "切る";
+Language = "言語";

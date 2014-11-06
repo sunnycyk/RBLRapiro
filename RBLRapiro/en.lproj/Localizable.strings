@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  RBLRapiro
+
+  Created by Sunny Cheung on 5/11/14.
+  Copyright (c) 2014 khl. All rights reserved.
+*/
+
+
+Initial_Position =  "Initial Position";
+Move_Forward ="Move Forward";
+Move_Backward = "Move Backward";
+Turn_Left = "Turn Left";
+Turn_Right = "Turn Right";
+Give_Me_a_Hug = "Give Me a Hug";
+Wave_Right_Hand = "Wave Right Hand";
+Move_Both_Arms = "Move Both Arms";
+Wave_Left_Hand="Wave Left Hand";
+Catch_Action = "Catch Action";
+CONNECT = "Connect";
+DISCONNECT = "Disconnect";
+Language = "Language";

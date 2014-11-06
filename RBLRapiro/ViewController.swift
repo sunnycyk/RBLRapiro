@@ -10,17 +10,20 @@ import UIKit
 
 class ViewController: UIViewController , UITableViewDataSource, UITableViewDelegate, BLEDelegate{
     
+    var lang:String = "en"
     var str:Array<String>!
     var bleShield:BLE!
+    var connectStatus:Bool = false
     @IBOutlet var myTable:UITableView!
+    @IBOutlet var navItems:UINavigationItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        str = ["Initial Position", "Move Forward", "Move Backward",
-                                    "Turn Left", "Turn Right", "Give Me a Hug", "Wave Right Hand",
-                                    "Move Both Arms", "Wave Left Hand", "Catch Action"]
+        str = ["Initial_Position", "Move_Forward", "Move_Backward",
+                                    "Turn_Left", "Turn_Right", "Give_Me_a_Hug", "Wave_Right_Hand",
+                                    "Move_Both_Arms", "Wave_Left_Hand", "Catch_Action"]
         
         
         bleShield = BLE()
@@ -38,7 +41,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
             bleShield.connectPeripheral(bleShield.peripherals.objectAtIndex(0) as CBPeripheral)
         }
         else {
-            self.navigationItem.leftBarButtonItem?.enabled = false
+            self.navItems.leftBarButtonItem?.enabled = true
         }
     }
     
@@ -57,29 +60,44 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         bleShield.findBLEPeripherals(3)
         
         NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("connectionTimer:"), userInfo: nil, repeats: false)
-        self.navigationItem.leftBarButtonItem?.enabled = false
+        self.navItems.leftBarButtonItem?.enabled = false
+    }
+    
+    func changeLang(lang:String) {
+        self.lang = lang
+        var bundle:NSBundle! = NSBundle(path: NSBundle.mainBundle().pathForResource(self.lang, ofType: "lproj")!)
+        self.myTable.reloadData()
+       
+        if (!self.connectStatus) {
+            self.navItems.leftBarButtonItem!.title = NSLocalizedString("CONNECT", bundle: bundle, comment: "Connect")
+        }
+        else {
+            self.navItems.leftBarButtonItem!.title = NSLocalizedString("DISCONNECT", bundle: bundle, comment: "Disconnect")
+        }
+        self.navItems.rightBarButtonItem!.title = NSLocalizedString("Language", bundle: bundle, comment: "Language")
+        
     }
     
     // BLEDelegate
     func bleDidConnect() {
-        self.navigationItem.leftBarButtonItem?.enabled=false
-        self.navigationItem.leftBarButtonItem?.title = "Disonnect"
-        
+        var bundle:NSBundle! = NSBundle(path: NSBundle.mainBundle().pathForResource(self.lang, ofType: "lproj")!)
+        self.navItems.leftBarButtonItem!.enabled=true
+        self.navItems.leftBarButtonItem!.title = NSLocalizedString("DISCONNECT", bundle: bundle, comment: "Disconnect")
+        self.connectStatus = true
         NSLog("bleDidConnect")
     }
     
     func bleDidDisconnect() {
-        self.navigationItem.leftBarButtonItem?.title = "Connect"
-        self.navigationItem.leftBarButtonItem?.enabled = true
-        
+        var bundle:NSBundle! = NSBundle(path: NSBundle.mainBundle().pathForResource(self.lang, ofType: "lproj")!)
+        self.navItems.leftBarButtonItem?.enabled = true
+        self.navItems.leftBarButtonItem?.title = NSLocalizedString("CONNECT", bundle: bundle, comment: "Connect")
+        self.connectStatus = false
         NSLog("bleDidDisconnect")
     }
     
-    func bleDidReceiveData(data: UnsafePointer<Void>, length: Int32) {
     
+    func bleDidReceiveData(data: UnsafeMutablePointer<UInt8>, length: Int32) {
         
-        
-  //     NSData(bytesNoCopy: UInt8(data/, length: length, freeWhenDone: true)
     }
 
     // UITableViewDataSource
@@ -90,9 +108,9 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: nil)
         
+        var bundle:NSBundle! = NSBundle(path: NSBundle.mainBundle().pathForResource(self.lang, ofType: "lproj")!)
         cell.textLabel.textColor = UIColor.blackColor()
-        cell.textLabel.text = str[indexPath.row]
-        
+        cell.textLabel.text = NSLocalizedString(  str[indexPath.row], bundle: bundle, comment:  str[indexPath.row])
         return cell
     }
     
