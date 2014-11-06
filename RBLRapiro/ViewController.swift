@@ -21,11 +21,12 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // String Keys for actions
         str = ["Initial_Position", "Move_Forward", "Move_Backward",
                                     "Turn_Left", "Turn_Right", "Give_Me_a_Hug", "Wave_Right_Hand",
                                     "Move_Both_Arms", "Wave_Left_Hand", "Catch_Action"]
         
-        
+        // Create BLE Connection
         bleShield = BLE()
         bleShield.controlSetup()
         bleShield.delegate = self
@@ -36,11 +37,13 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         // Dispose of any resources that can be recreated.
     }
     
+    // A function that will be scheduled after BLE Nano scanning for periphral
     func connectionTimer(timer:NSTimer) {
-        if (bleShield.peripherals?.count > 0) {
+        
+        if (bleShield.peripherals?.count > 0) { // we found BLE
             bleShield.connectPeripheral(bleShield.peripherals.objectAtIndex(0) as CBPeripheral)
         }
-        else {
+        else {  // NO BLE device found
             let alert:UIAlertView = UIAlertView(title: "Error", message: "No BLE Device(s) found.", delegate: nil, cancelButtonTitle: "OK")
             alert.show()
             self.navItems.leftBarButtonItem?.enabled = true
@@ -48,6 +51,8 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
     }
     
     @IBAction func BLEShieldScan(sender:AnyObject) {
+        
+        // If there is a active periphral, cancel the connection first
         if (bleShield.activePeripheral != nil) {
             if (bleShield.activePeripheral.state == CBPeripheralState.Connected) {
                 bleShield.CM.cancelPeripheralConnection(bleShield.activePeripheral)
@@ -55,16 +60,21 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
             }
         }
         
+        // empty the BLE peripherals list that found in the past
         if (bleShield.peripherals != nil) {
             bleShield.peripherals = nil
         }
         
+        // Start Scanning for BLE Peripheral for 3 seconds
         bleShield.findBLEPeripherals(3)
         
+        // Schedule timer for 3 second later and call connectionTimer: to check if any peripheral is found
         NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("connectionTimer:"), userInfo: nil, repeats: false)
+        
         self.navItems.leftBarButtonItem?.enabled = false
     }
     
+    // Change locale for UI
     func changeLang(lang:String) {
         self.lang = lang
         var bundle:NSBundle! = NSBundle(path: NSBundle.mainBundle().pathForResource(self.lang, ofType: "lproj")!)
@@ -97,9 +107,10 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         NSLog("bleDidDisconnect")
     }
     
-    
     func bleDidReceiveData(data: UnsafeMutablePointer<UInt8>, length: Int32) {
-        
+        var s:NSString! = NSString(bytes: data, length: Int(length), encoding: NSUTF8StringEncoding)
+        data.destroy()
+        NSLog(s!)
     }
 
     // UITableViewDataSource
