@@ -20,3 +20,5 @@ Catch_Action = "Catch Action";
 CONNECT = "Connect";
 DISCONNECT = "Disconnect";
 Language = "Language";
+ERROR = "Error";
+DEVICE_NOT_FOUND="No BLE Device(s) found.";

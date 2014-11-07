@@ -44,7 +44,9 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
             bleShield.connectPeripheral(bleShield.peripherals.objectAtIndex(0) as CBPeripheral)
         }
         else {  // NO BLE device found
-            let alert:UIAlertView = UIAlertView(title: "Error", message: "No BLE Device(s) found.", delegate: nil, cancelButtonTitle: "OK")
+            var bundle:NSBundle! = NSBundle(path: NSBundle.mainBundle().pathForResource(self.lang, ofType: "lproj")!)
+            let alert:UIAlertView = UIAlertView(title: NSLocalizedString("ERROR", bundle: bundle, comment: "Error"), message: NSLocalizedString("DEVICE_NOT_FOUND", bundle: bundle, comment: "Device not found"), delegate: nil, cancelButtonTitle: "OK")
+
             alert.show()
             self.navItems.leftBarButtonItem?.enabled = true
         }

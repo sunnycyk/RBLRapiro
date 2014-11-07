@@ -19,3 +19,5 @@ Catch_Action = "はい、どうぞ";
 CONNECT = "接続する";
 DISCONNECT = "切る";
 Language = "言語";
+ERROR = "エラー";
+DEVICE_NOT_FOUND="BLEデバイスを見つけることができません";

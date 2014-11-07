@@ -18,3 +18,5 @@ Catch_Action = "抓住";
 CONNECT = "連結";
 DISCONNECT = "取消連結";
 Language = "語言";
+ERROR = "錯誤";
+DEVICE_NOT_FOUND="找不到BLE設備";
