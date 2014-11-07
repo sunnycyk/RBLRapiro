@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController , UITableViewDataSource, UITableViewDelegate, BLEDelegate{
+class ViewController: UIViewController , UITableViewDataSource, UITableViewDelegate, BLEDelegate, UIAlertViewDelegate{
     
     var bundle:NSBundle!
     var str:Array<String>!
@@ -25,8 +25,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         str = ["Initial_Position", "Move_Forward", "Move_Backward",
                                     "Turn_Left", "Turn_Right", "Give_Me_a_Hug", "Wave_Right_Hand",
                                     "Move_Both_Arms", "Wave_Left_Hand", "Catch_Action"]
-        
-        self.bundle = NSBundle(path: NSBundle.mainBundle().pathForResource("en", ofType: "lproj")!) // base language
+        self.bundle = NSBundle.mainBundle() // base language
         // Create BLE Connection
         bleShield = BLE()
         bleShield.controlSetup()
@@ -77,6 +76,11 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         self.navItems.leftBarButtonItem?.enabled = false
     }
     
+    @IBAction func config() {
+        var message:UIAlertView = UIAlertView(title: NSLocalizedString("Language", bundle: self.bundle, comment: "Language"), message: NSLocalizedString("Choose_Language", bundle: self.bundle, comment: "Choose Language"), delegate: self, cancelButtonTitle: nil, otherButtonTitles: "English", "中文", "日本語")
+        message.show()
+    }
+    
     // Change locale for UI
     func changeLang(lang:String) {
         self.bundle = NSBundle(path: NSBundle.mainBundle().pathForResource(lang, ofType: "lproj")!)
@@ -88,7 +92,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         else {
             self.navItems.leftBarButtonItem!.title = NSLocalizedString("DISCONNECT", bundle: self.bundle, comment: "Disconnect")
         }
-        self.navItems.rightBarButtonItem!.title = NSLocalizedString("Language", bundle: self.bundle, comment: "Language")
+       // self.navItems.rightBarButtonItem!.title = NSLocalizedString("Language", bundle: self.bundle, comment: "Language")
         
     }
     
@@ -139,5 +143,18 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
             bleShield.write(NSString(format: "%d", indexPath.row).dataUsingEncoding(NSUTF8StringEncoding))
         }
     }
+    
+    // UIAlertView Delegate
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        switch(buttonIndex) {
+        case 0: self.changeLang("en")
+        case 1: self.changeLang("zh-Hant")
+        case 2: self.changeLang("ja")
+        default: self.changeLang("en")
+        }
+        
+        
+    }
+
 }
 

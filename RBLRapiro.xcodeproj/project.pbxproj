@@ -13,9 +13,9 @@
 		A32EAAF41A0A11B9008DEECE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAF31A0A11B9008DEECE /* Images.xcassets */; };
 		A32EAAF71A0A11B9008DEECE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32EAAF51A0A11B9008DEECE /* LaunchScreen.xib */; };
 		A32EAB031A0A11BA008DEECE /* RBLRapiroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32EAB021A0A11BA008DEECE /* RBLRapiroTests.swift */; };
+		A36965B91A0D0ACF0061AC64 /* config.png in Resources */ = {isa = PBXBuildFile; fileRef = A36965B81A0D0ACF0061AC64 /* config.png */; };
 		A3B9789A1A0A2CC700A7F99B /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B978981A0A2CC700A7F99B /* BLE.m */; };
 		A3B978A11A0A57C100A7F99B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3B978A31A0A57C100A7F99B /* Localizable.strings */; };
-		A3B978BF1A0B206000A7F99B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B978BE1A0B206000A7F99B /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,9 @@
 		A32EAB011A0A11BA008DEECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A32EAB021A0A11BA008DEECE /* RBLRapiroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBLRapiroTests.swift; sourceTree = "<group>"; };
 		A32EAB131A0A1D91008DEECE /* BLE-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLE-Bridging-Header.h"; sourceTree = "<group>"; };
+		A36965B81A0D0ACF0061AC64 /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = config.png; sourceTree = "<group>"; };
+		A36965CE1A0D109F0061AC64 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		A36965CF1A0D10A20061AC64 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3B978971A0A2CC700A7F99B /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
 		A3B978981A0A2CC700A7F99B /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
 		A3B978991A0A2CC700A7F99B /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
@@ -46,9 +49,6 @@
 		A3B978AC1A0A61A200A7F99B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A3B978B11A0A61B900A7F99B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3B978B21A0A63F600A7F99B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A3B978BE1A0B206000A7F99B /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
-		A3B978C61A0B2F5000A7F99B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Main.storyboard"; sourceTree = "<group>"; };
-		A3B978C71A0B2F5900A7F99B /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +90,9 @@
 		A32EAAE91A0A11B9008DEECE /* RBLRapiro */ = {
 			isa = PBXGroup;
 			children = (
+				A36965B81A0D0ACF0061AC64 /* config.png */,
 				A3B978961A0A2CC700A7F99B /* BLE */,
 				A32EAAEC1A0A11B9008DEECE /* AppDelegate.swift */,
-				A3B978BE1A0B206000A7F99B /* TableViewController.swift */,
 				A32EAAEE1A0A11B9008DEECE /* ViewController.swift */,
 				A32EAAF01A0A11B9008DEECE /* Main.storyboard */,
 				A32EAAF31A0A11B9008DEECE /* Images.xcassets */,
@@ -224,6 +224,7 @@
 			files = (
 				A32EAAF21A0A11B9008DEECE /* Main.storyboard in Resources */,
 				A3B978A11A0A57C100A7F99B /* Localizable.strings in Resources */,
+				A36965B91A0D0ACF0061AC64 /* config.png in Resources */,
 				A32EAAF71A0A11B9008DEECE /* LaunchScreen.xib in Resources */,
 				A32EAAF41A0A11B9008DEECE /* Images.xcassets in Resources */,
 			);
@@ -246,7 +247,6 @@
 				A3B9789A1A0A2CC700A7F99B /* BLE.m in Sources */,
 				A32EAAEF1A0A11B9008DEECE /* ViewController.swift in Sources */,
 				A32EAAED1A0A11B9008DEECE /* AppDelegate.swift in Sources */,
-				A3B978BF1A0B206000A7F99B /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +273,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				A3B978B11A0A61B900A7F99B /* en */,
-				A3B978C61A0B2F5000A7F99B /* zh-Hant */,
-				A3B978C71A0B2F5900A7F99B /* ja */,
+				A36965CE1A0D109F0061AC64 /* zh-Hant */,
+				A36965CF1A0D10A20061AC64 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -393,12 +393,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/RBLRapiroTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -406,12 +408,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/RBLRapiroTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
