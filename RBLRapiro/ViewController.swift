@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController , UITableViewDataSource, UITableViewDelegate, BLEDelegate{
     
-    var lang:String = "en"
+    var bundle:NSBundle!
     var str:Array<String>!
     var bleShield:BLE!
     var connectStatus:Bool = false
@@ -26,6 +26,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
                                     "Turn_Left", "Turn_Right", "Give_Me_a_Hug", "Wave_Right_Hand",
                                     "Move_Both_Arms", "Wave_Left_Hand", "Catch_Action"]
         
+        self.bundle = NSBundle(path: NSBundle.mainBundle().pathForResource("en", ofType: "lproj")!) // base language
         // Create BLE Connection
         bleShield = BLE()
         bleShield.controlSetup()
@@ -44,8 +45,8 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
             bleShield.connectPeripheral(bleShield.peripherals.objectAtIndex(0) as CBPeripheral)
         }
         else {  // NO BLE device found
-            var bundle:NSBundle! = NSBundle(path: NSBundle.mainBundle().pathForResource(self.lang, ofType: "lproj")!)
-            let alert:UIAlertView = UIAlertView(title: NSLocalizedString("ERROR", bundle: bundle, comment: "Error"), message: NSLocalizedString("DEVICE_NOT_FOUND", bundle: bundle, comment: "Device not found"), delegate: nil, cancelButtonTitle: "OK")
+          
+            let alert:UIAlertView = UIAlertView(title: NSLocalizedString("ERROR", bundle: self.bundle, comment: "Error"), message: NSLocalizedString("DEVICE_NOT_FOUND", bundle: self.bundle, comment: "Device not found"), delegate: nil, cancelButtonTitle: "OK")
 
             alert.show()
             self.navItems.leftBarButtonItem?.enabled = true
@@ -78,33 +79,30 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
     
     // Change locale for UI
     func changeLang(lang:String) {
-        self.lang = lang
-        var bundle:NSBundle! = NSBundle(path: NSBundle.mainBundle().pathForResource(self.lang, ofType: "lproj")!)
+        self.bundle = NSBundle(path: NSBundle.mainBundle().pathForResource(lang, ofType: "lproj")!)
         self.myTable.reloadData()
        
         if (!self.connectStatus) {
-            self.navItems.leftBarButtonItem!.title = NSLocalizedString("CONNECT", bundle: bundle, comment: "Connect")
+            self.navItems.leftBarButtonItem!.title = NSLocalizedString("CONNECT", bundle: self.bundle, comment: "Connect")
         }
         else {
-            self.navItems.leftBarButtonItem!.title = NSLocalizedString("DISCONNECT", bundle: bundle, comment: "Disconnect")
+            self.navItems.leftBarButtonItem!.title = NSLocalizedString("DISCONNECT", bundle: self.bundle, comment: "Disconnect")
         }
-        self.navItems.rightBarButtonItem!.title = NSLocalizedString("Language", bundle: bundle, comment: "Language")
+        self.navItems.rightBarButtonItem!.title = NSLocalizedString("Language", bundle: self.bundle, comment: "Language")
         
     }
     
     // BLEDelegate
     func bleDidConnect() {
-        var bundle:NSBundle! = NSBundle(path: NSBundle.mainBundle().pathForResource(self.lang, ofType: "lproj")!)
         self.navItems.leftBarButtonItem!.enabled=true
-        self.navItems.leftBarButtonItem!.title = NSLocalizedString("DISCONNECT", bundle: bundle, comment: "Disconnect")
+        self.navItems.leftBarButtonItem!.title = NSLocalizedString("DISCONNECT", bundle: self.bundle, comment: "Disconnect")
         self.connectStatus = true
         NSLog("bleDidConnect")
     }
     
     func bleDidDisconnect() {
-        var bundle:NSBundle! = NSBundle(path: NSBundle.mainBundle().pathForResource(self.lang, ofType: "lproj")!)
         self.navItems.leftBarButtonItem?.enabled = true
-        self.navItems.leftBarButtonItem?.title = NSLocalizedString("CONNECT", bundle: bundle, comment: "Connect")
+        self.navItems.leftBarButtonItem?.title = NSLocalizedString("CONNECT", bundle: self.bundle, comment: "Connect")
         self.connectStatus = false
         NSLog("bleDidDisconnect")
     }
@@ -123,9 +121,9 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: nil)
         
-        var bundle:NSBundle! = NSBundle(path: NSBundle.mainBundle().pathForResource(self.lang, ofType: "lproj")!)
+      
         cell.textLabel.textColor = UIColor.blackColor()
-        cell.textLabel.text = NSLocalizedString(  str[indexPath.row], bundle: bundle, comment:  str[indexPath.row])
+        cell.textLabel.text = NSLocalizedString(  str[indexPath.row], bundle: self.bundle, comment:  str[indexPath.row])
         return cell
     }
     
