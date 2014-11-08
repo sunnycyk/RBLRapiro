@@ -140,7 +140,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         
         if (bleShield.activePeripheral?.state == CBPeripheralState.Connected) {
-            bleShield.write(NSString(format: "%d", indexPath.row).dataUsingEncoding(NSUTF8StringEncoding))
+            bleShield.write(NSString(format: "#M%d", indexPath.row).dataUsingEncoding(NSUTF8StringEncoding))
         }
     }
     
